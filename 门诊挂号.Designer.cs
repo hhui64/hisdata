@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lTotal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dGuahaoTime = new System.Windows.Forms.DateTimePicker();
             this.cDoctorName = new System.Windows.Forms.ComboBox();
@@ -47,9 +50,6 @@
             this.tName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lTotal = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonCleanAll = new System.Windows.Forms.Button();
@@ -86,6 +86,40 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "挂号信息";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lTotal);
+            this.groupBox2.Location = new System.Drawing.Point(806, 199);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(324, 178);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "挂号费用";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 10.71429F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(247, 89);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 52);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "元";
+            // 
+            // lTotal
+            // 
+            this.lTotal.Font = new System.Drawing.Font("微软雅黑", 26.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lTotal.ForeColor = System.Drawing.Color.Red;
+            this.lTotal.Location = new System.Drawing.Point(27, 52);
+            this.lTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lTotal.Name = "lTotal";
+            this.lTotal.Size = new System.Drawing.Size(230, 88);
+            this.lTotal.TabIndex = 23;
+            this.lTotal.Text = "0.00";
+            this.lTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -292,40 +326,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "姓名";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.lTotal);
-            this.groupBox2.Location = new System.Drawing.Point(806, 199);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 178);
-            this.groupBox2.TabIndex = 26;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "挂号费用";
-            // 
-            // lTotal
-            // 
-            this.lTotal.Font = new System.Drawing.Font("微软雅黑", 26.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lTotal.ForeColor = System.Drawing.Color.Red;
-            this.lTotal.Location = new System.Drawing.Point(27, 52);
-            this.lTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lTotal.Name = "lTotal";
-            this.lTotal.Size = new System.Drawing.Size(230, 88);
-            this.lTotal.TabIndex = 23;
-            this.lTotal.Text = "0.00";
-            this.lTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 10.71429F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(247, 89);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 52);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "元";
-            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Yellow;
@@ -367,7 +367,7 @@
             this.buttonGuahao.Name = "buttonGuahao";
             this.buttonGuahao.Size = new System.Drawing.Size(831, 83);
             this.buttonGuahao.TabIndex = 10;
-            this.buttonGuahao.Text = "立  即  挂  号";
+            this.buttonGuahao.Text = "立即挂号 >>";
             this.buttonGuahao.UseVisualStyleBackColor = true;
             this.buttonGuahao.Click += new System.EventHandler(this.buttonGuahao_Click);
             // 
