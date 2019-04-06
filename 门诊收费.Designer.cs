@@ -303,7 +303,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "门诊收费";
-            this.Text = "0";
+            this.Text = "门诊收费";
             this.Load += new System.EventHandler(this.门诊收费_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

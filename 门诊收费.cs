@@ -22,10 +22,10 @@ namespace login
             dataOpt.BindDataGridView(dSelectHuajiaTable, "SELECT b.姓名, b.性别, a.编号, a.科室, a.挂号编号, a.医生, a.划价时间, a.划价员, a.是否收费, a.收费员, a.收费时间, a.划价金额, a.是否发药, a.发药时间, a.发药员 FROM 门诊划价 a INNER JOIN 门诊挂号 b ON a.挂号编号 = b.编号 WHERE (a.是否收费 = '否');");
             SetPrice.Text = "0";
             GetPrice.Text = "0";
-            //dDrugListTable.Rows.Clear();
-            String HuajiaId = dSelectHuajiaTable.Rows[dSelectHuajiaTable.CurrentRow.Index].Cells[2].Value.ToString();
-            String strSql = "SELECT DISTINCT a.编号, a.药品编号, b.名称, a.单价, a.数量, a.金额, a.划价编号 FROM 门诊划价明细 a INNER JOIN v收费项目及药品 b ON a.药品编号 = b.编号 AND a.划价编号='" + HuajiaId + "';";
-            dataOpt.BindDataGridView(dDrugListTable, strSql);
+            dDrugListTable.DataSource = null;
+            //String HuajiaId = dSelectHuajiaTable.Rows[dSelectHuajiaTable.CurrentRow.Index].Cells[2].Value.ToString();
+            //String strSql = "SELECT DISTINCT a.编号, a.药品编号, b.名称, a.单价, a.数量, a.金额, a.划价编号 FROM 门诊划价明细 a INNER JOIN v收费项目及药品 b ON a.药品编号 = b.编号 AND a.划价编号='" + HuajiaId + "';";
+            //dataOpt.BindDataGridView(dDrugListTable, strSql);
         }
 
         private void 门诊收费_Load(object sender, EventArgs e)
@@ -79,7 +79,9 @@ namespace login
                 MessageBox.Show("大哥钱不够请补上吧!!!");
                 return;
             } else {
+                if (dSelectHuajiaTable.Rows.Count == 1) return;
                 String HuajiaId = dSelectHuajiaTable.Rows[dSelectHuajiaTable.CurrentRow.Index].Cells[2].Value.ToString();
+                if (HuajiaId == "") return;
                 String strSql = string.Format("UPDATE [dbo].[门诊划价] SET [是否收费] = '是',[收费员] = '{0}',[收费时间] = '{1}' WHERE [编号] = '{2}';", null, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), HuajiaId);
                 if (dataOpt.OperateData(strSql) == -1)
                 {
