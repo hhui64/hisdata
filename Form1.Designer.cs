@@ -130,12 +130,14 @@
             this.门诊收费ToolStripMenuItem.Name = "门诊收费ToolStripMenuItem";
             this.门诊收费ToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
             this.门诊收费ToolStripMenuItem.Text = "门诊收费";
+            this.门诊收费ToolStripMenuItem.Click += new System.EventHandler(this.门诊收费ToolStripMenuItem_Click);
             // 
             // 药房发药ToolStripMenuItem
             // 
             this.药房发药ToolStripMenuItem.Name = "药房发药ToolStripMenuItem";
             this.药房发药ToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
             this.药房发药ToolStripMenuItem.Text = "药房发药";
+            this.药房发药ToolStripMenuItem.Click += new System.EventHandler(this.药房发药ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 

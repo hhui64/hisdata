@@ -67,6 +67,24 @@ namespace login
             detail.Show();
         }
 
+        private void 门诊收费ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            门诊收费 detail = new 门诊收费();
+            if (isOpenThisForm(detail)) return;
+            detail.TopLevel = false;
+            detail.MdiParent = this;
+            detail.Show();
+        }
+
+        private void 药房发药ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            药房发药 detail = new 药房发药();
+            if (isOpenThisForm(detail)) return;
+            detail.TopLevel = false;
+            detail.MdiParent = this;
+            detail.Show();
+        }
+
         private void 科室挂号量ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             科室挂号量 detail = new 科室挂号量();
