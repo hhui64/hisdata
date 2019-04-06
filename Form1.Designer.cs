@@ -60,7 +60,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1770, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(1770, 39);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +72,7 @@
             this.医生信息ToolStripMenuItem,
             this.病人信息ToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(108, 32);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(108, 33);
             this.toolStripMenuItem3.Text = "信息维护";
             // 
             // 药品信息ToolStripMenuItem
@@ -107,7 +107,7 @@
             this.门诊收费ToolStripMenuItem,
             this.药房发药ToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(108, 32);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(108, 33);
             this.toolStripMenuItem1.Text = "门诊管理";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -123,6 +123,7 @@
             this.门诊划价ToolStripMenuItem.Name = "门诊划价ToolStripMenuItem";
             this.门诊划价ToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
             this.门诊划价ToolStripMenuItem.Text = "门诊划价";
+            this.门诊划价ToolStripMenuItem.Click += new System.EventHandler(this.门诊划价ToolStripMenuItem_Click);
             // 
             // 门诊收费ToolStripMenuItem
             // 
@@ -142,7 +143,7 @@
             this.科室挂号量ToolStripMenuItem,
             this.药房库存量ToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(108, 32);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(108, 33);
             this.toolStripMenuItem2.Text = "统计查询";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -163,7 +164,7 @@
             // 退出xitongToolStripMenuItem
             // 
             this.退出xitongToolStripMenuItem.Name = "退出xitongToolStripMenuItem";
-            this.退出xitongToolStripMenuItem.Size = new System.Drawing.Size(108, 32);
+            this.退出xitongToolStripMenuItem.Size = new System.Drawing.Size(108, 33);
             this.退出xitongToolStripMenuItem.Text = "退出系统";
             this.退出xitongToolStripMenuItem.Click += new System.EventHandler(this.退出xitongToolStripMenuItem_Click);
             // 

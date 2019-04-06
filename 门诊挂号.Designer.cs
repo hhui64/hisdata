@@ -236,7 +236,7 @@
             // 
             // tAge
             // 
-            this.tAge.BackColor = System.Drawing.SystemColors.Window;
+            this.tAge.BackColor = System.Drawing.SystemColors.Info;
             this.tAge.Location = new System.Drawing.Point(406, 79);
             this.tAge.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tAge.MaxLength = 3;
@@ -395,6 +395,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "门诊挂号";
             this.Text = "门诊挂号";
             this.Load += new System.EventHandler(this.门诊挂号_Load);

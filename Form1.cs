@@ -16,6 +16,19 @@ namespace login
             InitializeComponent();
         }
 
+        public bool isOpenThisForm(Form thisForm) // 判断form是否已打开, 如果打开则激活
+        {
+            foreach (Form forms in Application.OpenForms)
+            {
+                if (forms.Name.ToUpper() == thisForm.Name.ToUpper())
+                {
+                    forms.Activate();
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void select_Load(object sender, EventArgs e)
         {
 
@@ -45,6 +58,15 @@ namespace login
             detail.Show();
         }
 
+        private void 门诊划价ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            门诊划价 detail = new 门诊划价();
+            if (isOpenThisForm(detail)) return;
+            detail.TopLevel = false;
+            detail.MdiParent = this;
+            detail.Show();
+        }
+
         private void 科室挂号量ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             科室挂号量 detail = new 科室挂号量();
@@ -66,19 +88,6 @@ namespace login
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        public bool isOpenThisForm(Form thisForm) // 判断form是否已打开, 如果打开则激活
-        {
-            foreach (Form forms in Application.OpenForms)
-            {
-                if (forms.Name.ToUpper() == thisForm.Name.ToUpper())
-                {
-                    forms.Activate();
-                    return true;
-                }
-            }
-            return false;
         }
 
     }
